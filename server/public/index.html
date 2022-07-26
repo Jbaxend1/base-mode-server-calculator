@@ -8,14 +8,23 @@
         <h1>Base Mode Calculator</h1>
     </header>
     <div class="container">
-        <input class="firstNum">
+        <input type="number" class="firstNum">
         <button class="plus">+</button>
         <button class="minus">-</button>
         <button class="times">&times;</button>
         <button class="divide">&divide</button>
         <input class="secondNum">
         <button class="equals">=</button>
-        <button class="clear">C</button>
+        <button type="number" class="clear">C</button>
+    </div>
 
+    <div id="current-result">
+        <p id="new-result">45</p>
+    </div>
+
+    <div id="history">
+        <ul id="old-equations">
+            <li>4=5=Chair</li>
+        </ul>
     </div>
 </body>

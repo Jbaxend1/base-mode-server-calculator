@@ -14,7 +14,17 @@ Create a user interface where the user can input two values (2 input elements) a
 - [x] Create opperator buttons
 - [x] Create equals button
 - [x] Create clear button
-- [ ] Create equals click event handler
+- [x] Create equals click event handler
+- [ ] 
+
+- [ ] Make POST request to server to send data
+- [ ]
+- [ ]
+- [ ]
+- [ ]
+- [ ]
+- [ ]
+- [ ]
 
 Build out the server-side logic to compute the numbers as appropriate. The server should be able to handle Addition, Subtraction, Multiplication, and Division. Once the calculation is complete, send back the OK. You should do a GET request after the POST to get the actual calculation.
 

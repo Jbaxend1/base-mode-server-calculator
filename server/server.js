@@ -6,6 +6,8 @@ app.use(express.static('server/public'));
 
 app.use(express.urlencoded());
 
+
+// Add a place to store equation data
 const equationsArray = [
     {
         numOne: 4,
@@ -19,11 +21,18 @@ const equationsArray = [
     }
 ];
 
+// add GET to reach the equation data.
 app.get('/equations', (req, res) => {
     res.send(equationsArray)
 });
 
+app.post('/equations', (req, res) => {
+    const newEquation = req.body;
 
+    equationsArray.push(newEquation);
+
+    res.send(newEquation);
+});
 
 
 app.listen(port, () => {

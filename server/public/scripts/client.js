@@ -5,6 +5,8 @@ function readyNow () {
 
     // Click Handlers
     $('#equal-submit').on('click', submitEquals);
+    $('.opperator').on('click', opperatorClick);
+
 }
 
 function submitEquals () {
@@ -17,13 +19,13 @@ function submitEquals () {
         url: '/equations',
         data: {
             numOne: $('.firstNum').val(),
-            opp: $('.opperator').text(),
+            opp: $('.opperator').val(),
             numTwo: $('.secondNum').val(),
         }
     }).then(function(response) {
         // console.log(response);
         getEquations();
-    })
+    });
 }
 
 function getEquations () {
@@ -37,8 +39,15 @@ function getEquations () {
             <ul>
                 <li>${equals.numOne} ${equals.opp} ${equals.numTwo}
             </ul>
-
         `)
         }
     })
+};
+
+function opperatorClick () {
+    let opp = $(this).data('mode');
+
+    console.log(opp);
+
 }
+

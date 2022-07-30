@@ -6,7 +6,6 @@ app.use(express.static('server/public'));
 
 app.use(express.urlencoded());
 
-
 // Add a place to store equation data
 const equationsArray = [];
 
@@ -18,9 +17,6 @@ app.get('/equations', (req, res) => {
 app.post('/equations', (req, res) => {
     const newEQ = req.body;
 
-    
-    
-
     let x = parseInt(newEQ.numOne);
     let y = parseInt(newEQ.numTwo);
     // console.log(x);
@@ -28,8 +24,6 @@ app.post('/equations', (req, res) => {
 
     let sum = 0;
     
-    
-
     if(newEQ.opp === '+') {
         sum = x + y;
     }
@@ -51,7 +45,7 @@ app.post('/equations', (req, res) => {
     };
 
     newEQ.answer = sum
-    
+
     equationsArray.push(newEQ);
 
     res.send(result);

@@ -25,11 +25,11 @@ Create a user interface where the user can input two values (2 input elements) a
 - [x] Create logic on server for multiplication
 - [x] Create logic on server for division
 - [x] Handle "null" opperator
-- [ ]
-- [ ]
-- [ ]
-- [ ]
-- [ ]
+- [x] Update answer in getEquations history
+
+# Styling
+- [ ] Add styling
+
 
 Build out the server-side logic to compute the numbers as appropriate. The server should be able to handle Addition, Subtraction, Multiplication, and Division. Once the calculation is complete, send back the OK. You should do a GET request after the POST to get the actual calculation.
 

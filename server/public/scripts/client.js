@@ -80,7 +80,7 @@ function opperatorClick () {
 // Function that handles clearing the inputs, opperator and "new-result" div.
 function submitClear() {
     // console.log('in submitClear');
-    $('#new-result').empty();
+    $('#new-result').empty(); // result sent as an obj
     $('.firstNum').val('');
     $('.secondNum').val('');
     opperator = '';

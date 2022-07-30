@@ -8,18 +8,7 @@ app.use(express.urlencoded());
 
 
 // Add a place to store equation data
-const equationsArray = [
-    {
-        numOne: 4,
-        opp: 'x',
-        numTwo: 4
-    },
-    {
-        numOne: 5,
-        opp: '/',
-        numTwo: 5
-    }
-];
+const equationsArray = [];
 
 // add GET to reach the equation data.
 app.get('/equations', (req, res) => {
@@ -27,11 +16,45 @@ app.get('/equations', (req, res) => {
 });
 
 app.post('/equations', (req, res) => {
-    const newEquation = req.body;
+    const newEQ = req.body;
 
-    equationsArray.push(newEquation);
+    
+    
 
-    res.send(newEquation);
+    let x = parseInt(newEQ.numOne);
+    let y = parseInt(newEQ.numTwo);
+    // console.log(x);
+    // console.log(y);
+
+    let sum = 0;
+    
+    
+
+    if(newEQ.opp === '+') {
+        sum = x + y;
+    }
+    if(newEQ.opp === '-') {
+        sum = x - y;
+    }
+    if(newEQ.opp === 'x') {
+        sum = x * y;
+    }
+    if(newEQ.opp === '/') {
+        sum = x / y;
+    }
+    if(newEQ.opp === ''){
+        sum = null;
+    }
+
+    result = {
+        answer: sum,
+    };
+
+    newEQ.answer = sum
+    
+    equationsArray.push(newEQ);
+
+    res.send(result);
 });
 
 

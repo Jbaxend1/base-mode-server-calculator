@@ -24,9 +24,23 @@ function submitEquals () {
             numOne: $('.firstNum').val(),
             opp: opperator,
             numTwo: $('.secondNum').val(),
+            answer: '',
         }
     }).then(function(response) {
         // console.log(response);
+        console.log(response.answer);
+
+        // handler if no opperator is selected
+        if(response.answer === null){
+            $('#new-result').text(`
+                No Opperation Selected
+            `)
+        } else {
+            $('#new-result').text(`
+            ${response.answer}
+        `);
+        }
+        // call to get the updated equation array
         getEquations();
     });
 }
@@ -43,10 +57,14 @@ function getEquations () {
             let equals = response[i];
             $('#history').append(`
             <ul>
-                <li>${equals.numOne} ${equals.opp} ${equals.numTwo} </li>
+                <li>${equals.numOne} ${equals.opp} ${equals.numTwo} = ${equals.answer}</li>
             </ul>
         `)
-        }
+        };
+
+        // $('#new-result').text(`
+        //     ${response}
+        // `);
     })
 };
 
@@ -62,7 +80,7 @@ function opperatorClick () {
 // Function that handles clearing the inputs, opperator and "new-result" div.
 function submitClear() {
     // console.log('in submitClear');
-    $('#new-result').val('');
+    $('#new-result').empty();
     $('.firstNum').val('');
     $('.secondNum').val('');
     opperator = '';

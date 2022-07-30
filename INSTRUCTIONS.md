@@ -20,8 +20,11 @@ Create a user interface where the user can input two values (2 input elements) a
 - [x] Clear button click handler
 
 - [x] Make POST request to server to send data
-- [ ]
-- [ ]
+- [x] Create logic on server for addition
+- [x] Create logic on server for subtraction
+- [x] Create logic on server for multiplication
+- [x] Create logic on server for division
+- [x] Handle "null" opperator
 - [ ]
 - [ ]
 - [ ]

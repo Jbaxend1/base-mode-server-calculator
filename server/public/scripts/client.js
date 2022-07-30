@@ -6,11 +6,14 @@ function readyNow () {
     // Click Handlers
     $('#equal-submit').on('click', submitEquals);
     $('.opperator').on('click', opperatorClick);
+    $('.clear').on('click', submitClear);
 
 }
 
+// This function is returning the array of equations as a response.
 function submitEquals () {
     // console.log('in submitEquals');
+
     // Take the input values and operator data and send
     // to the server
     
@@ -28,8 +31,8 @@ function submitEquals () {
     });
 }
 
-let opperator = '';
 
+// This function is "Getting" the array of equations from the server and displaying on the DOM
 function getEquations () {
     $.ajax({
         type: 'GET',
@@ -47,8 +50,20 @@ function getEquations () {
     })
 };
 
+// This next function and variable allows for capture of the opperator button clicks via .data('mode') to be sent to the server used in the 'POST'.  
+
+let opperator = '';
+
 function opperatorClick () {
     let opp = $(this).data('mode');
     opperator = opp;
 }
 
+// Function that handles clearing the inputs, opperator and "new-result" div.
+function submitClear() {
+    // console.log('in submitClear');
+    $('#new-result').val('');
+    $('.firstNum').val('');
+    $('.secondNum').val('');
+    opperator = '';
+}

@@ -15,9 +15,11 @@ Create a user interface where the user can input two values (2 input elements) a
 - [x] Create equals button
 - [x] Create clear button
 - [x] Create equals click event handler
-- [ ] 
+- [x] Opperator button capture function
+- [x] Clear buttons functionality
+- [x] Clear button click handler
 
-- [ ] Make POST request to server to send data
+- [x] Make POST request to server to send data
 - [ ]
 - [ ]
 - [ ]

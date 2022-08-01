@@ -26,6 +26,7 @@ Create a user interface where the user can input two values (2 input elements) a
 - [x] Create logic on server for division
 - [x] Handle "null" opperator
 - [x] Update answer in getEquations history
+- [x] Make equations history stay on page until server restart
 
 # Styling
 - [ ] Add styling

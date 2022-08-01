@@ -7,21 +7,21 @@
     <header>
         <h1>Base Mode Calculator</h1>
     </header>
-    <div class="container">
-        <input type="text" class="firstNum">
-        <button class="opperator" data-mode="+">+</button>
-        <button class="opperator" data-mode="-">-</button>
-        <button class="opperator" data-mode="*">&times;</button>
-        <button class="opperator" data-mode="/">&divide</button>
-        <input class="secondNum">
-        <button id="equal-submit" class="equals">=</button>
-        <button type="text" class="clear">C</button>
-    </div>
-
-    <div id="current-result">
-        <span id="new-result"></span>
-    </div>
-
-    <div id="history">
+    <div id="calculator">
+        <div id="display">
+            <span id="new-result"></span>
+        </div>
+        <div class="container">
+            <input type="text" class="firstNum box in1">
+            <button class="opperator box plus" data-mode="+">+</button>
+            <button class="opperator box minus" data-mode="-">-</button>
+            <button class="opperator box times" data-mode="*">&times;</button>
+            <button class="opperator box divide" data-mode="/">&divide</button>
+            <input class="secondNum box in2">
+            <button id="equal-submit" class="equals box">=</button>
+            <button type="text" class="clear box">C</button>
+        </div>
+        <div id="history">
+        </div>
     </div>
 </body>

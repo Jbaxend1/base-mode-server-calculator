@@ -8,6 +8,9 @@ function readyNow () {
     $('.opperator').on('click', opperatorClick);
     $('.clear').on('click', submitClear);
 
+    // Call equations 'GET' on ready now to keep equation history
+    // on the page after refresh.
+    getEquations();
 }
 
 // This function is returning the array of equations as a response.
@@ -30,14 +33,16 @@ function submitEquals () {
         // console.log(response);
         console.log(response.answer);
 
+        let display = response.answer;
+
         // handler if no opperator is selected
-        if(response.answer === null){
+        if(display === null){
             $('#new-result').text(`
                 No Opperation Selected
             `)
         } else {
             $('#new-result').text(`
-            ${response.answer}
+            ${display.toLocaleString("en-US")}
         `);
         }
         // call to get the updated equation array
@@ -55,6 +60,8 @@ function getEquations () {
         $('#history').empty();
         for (let i = 0; i < response.length; i++) {
             let equals = response[i];
+            // let x = equals.numOne.toLocaleString("en-US");
+            // let y = equals.numTwo.toLocaleString("en-US");
             $('#history').append(`
             <ul>
                 <li>${equals.numOne} ${equals.opp} ${equals.numTwo} = ${equals.answer}</li>

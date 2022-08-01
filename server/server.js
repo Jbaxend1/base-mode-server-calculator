@@ -44,7 +44,7 @@ app.post('/equations', (req, res) => {
         answer: sum,
     };
 
-    newEQ.answer = sum
+    newEQ.answer = sum.toLocaleString("en-US");
 
     equationsArray.push(newEQ);
 

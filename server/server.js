@@ -30,7 +30,7 @@ app.post('/equations', (req, res) => {
     if(newEQ.opp === '-') {
         sum = x - y;
     }
-    if(newEQ.opp === 'x') {
+    if(newEQ.opp === '*') {
         sum = x * y;
     }
     if(newEQ.opp === '/') {

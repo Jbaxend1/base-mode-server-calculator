@@ -1,14 +1,62 @@
-#display {
+
+.display {
+    font-size:larger;
+    font-weight: 700;
+    font-family: 'Courier New', Courier, monospace;
     text-align: right;
     padding-right: 1rem;
     padding-top: 12.5px;
     color:floralwhite;
-    margin-top: 25px;
+    margin-top: 30px;
     margin-bottom: 10px;
     background-color: black;
     /* width: 430px; */
     height: 35px;
     border-radius: 6px;
+    /* padding-bottom: 20px; */
+}
+
+#history {
+    font-weight: 700;
+    text-align: justify;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    font-family: 'Courier New', Courier, monospace;
+    color: antiquewhite;
+    background-color: black;
+    border-radius: 6px;
+}
+h1 {
+    margin-left: 104px;
+}
+
+h3 {
+    text-align: center;
+    font-style: oblique;
+    font-family:'Courier New', Courier, monospace;
+    color: antiquewhite;
+}
+
+h4 {
+   padding-top: 2px; 
+}
+
+#logo {
+    margin-left: 355px;
+    margin-right: 12px;
+    text-align: right;
+    font-family: monospace;
+    padding-right: 10px;
+    /* padding-top: 12px; */
+    /* padding-bottom: 7.5; */
+    border-radius: 6px;
+    color: rgb(239, 168, 53);
+    background-color:darkslategray;
+    height: 20px;;
+    width:auto;
+    
+    /* padding-top: 2px */
+    
 }
 
 input,
@@ -28,12 +76,16 @@ button {
     grid-template-areas: 
         "firstNum firstNum secondNum secondNum"
         "plus minus times divide"
-        "equals equals clear clear"
+        "clear clear equals equals"
     ;
 }
 
 .opperator {
-    background-color:dimgrey;
+    background-color:#dedede;
+}
+
+.opperator:hover {
+    background-color: #949393;
 }
 
 .firstNum {
@@ -58,9 +110,17 @@ button {
     grid-area: equals;
     background-color: rgb(110, 145, 49);
 }
+
+.equals:hover {
+    background-color: rgb(157, 192, 88);
+}
 .clear {
     grid-area: clear;
     background-color: rgb(199, 57, 42);
+}
+
+.clear:hover {
+    background-color: rgb(235, 141, 130);
 }
 
 .content {
@@ -69,7 +129,9 @@ button {
 }
 
 #calculator {
+    background-color: #949393;
     max-width: 500px;
+    max-height: 500px;
 }
 
 .box {
